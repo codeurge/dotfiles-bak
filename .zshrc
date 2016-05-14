@@ -26,3 +26,5 @@ source "$HOME/.zsh/fzf.zsh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 eval "$(docker-machine env default)"
+
+source "$HOME/.zsh/aliases.zsh"
