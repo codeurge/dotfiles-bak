@@ -1,0 +1,9 @@
+[submodule ".zsh/pure"]
+	path = .zsh/pure
+	url = https://github.com/sindresorhus/pure
+[submodule ".fzf"]
+	path = .fzf
+	url = https://github.com/junegunn/fzf.git
+[submodule ".dracula-theme"]
+	path = .dracula-theme
+	url = https://github.com/zenorocha/dracula-theme
