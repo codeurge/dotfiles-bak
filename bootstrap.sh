@@ -13,7 +13,7 @@ git submodule update
 
 mkdir -p ~/.ssh
 
-dotfiles="$(ls -a) .ssh/config"
+dotfiles="$(ls -a)"
 for f in $dotfiles; do
   overwrite=false
   source_file=~/.dotfiles/$f
@@ -25,6 +25,8 @@ for f in $dotfiles; do
   [ $f = ".git" ]         && continue
   [ $f = ".gitignore" ]   && continue
   [ $f = ".gitmodules" ]  && continue
+  [ $f = ".dracula-theme" ]  && continue
+  [ $f = ".fonts" ]  && continue
   [ $f = "bootstrap.sh" ] && continue
   [ $f = "README.md" ]    && continue
 

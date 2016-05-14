@@ -7,3 +7,6 @@
 [submodule ".dracula-theme"]
 	path = .dracula-theme
 	url = https://github.com/zenorocha/dracula-theme
+[submodule ".fonts"]
+	path = .fonts
+	url = https://github.com/powerline/fonts.git

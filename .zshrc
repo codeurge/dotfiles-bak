@@ -17,9 +17,12 @@ export PAGER='less -q'
 
 # Automatically/easily switch ruby versions via chruby
 source /usr/local/opt/chruby/share/chruby/chruby.sh
-chruby $(cat ~/.ruby-version)
+source /usr/local/share/chruby/auto.sh
+chruby ruby-2.3
+export RUBY_DEV_VERSION=$(ruby -e 'puts RUBY_VERSION')
 
 # Add fzf.zsh. https://github.com/junegunn/fzf
 source "$HOME/.zsh/fzf.zsh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+eval "$(docker-machine env default)"
