@@ -32,7 +32,7 @@ fi;
 # Install `wget` with IRI support.
 brew install wget --with-iri
 
-brew install nodejs
+brew install node
 
 # Install more recent versions of some macOS tools.
 brew install vim --override-system-vi
@@ -48,20 +48,29 @@ brew install woff2
 
 # Install other useful binaries.
 brew install ack
+brew install cmake
 brew install dark-mode
 brew install git
 brew install git-lfs
+brew install htop
 brew install imagemagick --with-webp
 brew install lua
 brew install lynx
 brew install p7zip
 brew install pigz
+brew install postgresql
+brew services start postgresql
+brew install python
+brew install python3
 brew install pv
 brew install reattach-to-user-namespace
 brew install rename
+brew install redis
+brew services start redis
 brew install speedtest_cli
 brew install ssh-copy-id
 brew install testssl
+brew install tig
 brew install tree
 brew install webkit2png
 
