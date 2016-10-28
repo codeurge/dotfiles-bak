@@ -15,7 +15,7 @@ Plug 'christoomey/vim-tmux-navigator' " better tmux intergration
 Plug 'scrooloose/nerdtree' " nerdtree file navigation
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'tpope/vim-fugitive'
-Plug 'morhetz/gruvbox' " gruvbox color scheme
+Plug 'dracula/vim'
 Plug 'nathanaelkane/vim-indent-guides' " indent guides
 Plug 'ntpeters/vim-better-whitespace' " clean up whitespace
 Plug 'Lokaltog/vim-easymotion' " move quickly through files
@@ -27,19 +27,23 @@ Plug 'mxw/vim-jsx'
 Plug 'dbakker/vim-lint'
 Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'scrooloose/syntastic'
+Plug 'leafgarland/typescript-vim'
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-notes'
+Plug 'mhinz/vim-startify'
 call plug#end()
 
-colorscheme gruvbox
+colorscheme dracula
 
 " Text Formatting
 syntax enable " syntax highlighting
 filetype plugin indent on " load file type plugins
 set autoindent " automatic indent new lines
+set smartindent			" be smart about it
 set nowrap " do not wrap lines
 set tabstop=2 " set tab equivilant to 4 spaces
 set shiftwidth=2
 set softtabstop=2 " soft tabs
-set expandtab
 set virtualedit=block
 
 " Visual Cues
@@ -133,10 +137,9 @@ let g:indent_guides_guide_size = 2
 
 " Airline
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'gruvbox'
-let g:airline#extensions#tmuxline#enabled = 1
-let g:tmuxline_preset = 'minimal'
-let g:tmuxline_theme = 'vim_statusline_1'
+let g:airline_theme = 'dracula'
+let g:airline#extensions#tmuxline#enabled = 0
+let g:tmuxline_theme = 'dracula'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 
@@ -214,3 +217,7 @@ let g:syntastic_style_error_symbol = '⁉️'
 let g:syntastic_warning_symbol = '⚠️'
 let g:syntastic_style_warning_symbol = '💩'
 nnoremap <silent> <C-e> :Errors<CR>
+
+if has('nvim')
+    au! TabNewEntered * Startify
+endif
